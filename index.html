@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>내 주변 음식점 찾기</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=302c78a6f1a41f5b0d87aadf674b205d&libraries=services"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=302c78a6f1a41f5b0d87aadf674b205d&libraries=clusterer"></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="/image/Header.png">
+        <span> GPS 기반 주변 음식점 랜덤 추천 사이트 </span>
+        <div id="banner_Area">
+            <div class="banner_Container"> <img src="/image/Banner_1.png"> <img src="/image/Banner_2.png"> </div>
+            <div class="banner_Container"> <img src="/image/Banner_3.png"> <img src="/image/Banner_4.png"> </div>
+        </div>
+    </header>
+
+    <!-- map_Area -->
+    <div id="map_Area"></div>
+
+    <!-- search_Area -->
+    <div id="search_Area">
+        <div style="display: flex; gap: 20px;">
+            <span> <input type="radio" name="searchOption" value="recommendation" checked> 추천순 </span>
+            <span> <input type="radio" name="searchOption" value="shortestTime"> 최단 시간순 </span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <input type="text" placeholder="검색어를 입력하세요" />
+            <button>검색</button>
+            <button id="resetSelect">초기화</button>
+            <button id="randomSelect">랜덤 뽑기</button>
+        </div>
+    </div>
+
+    <!-- placeResult_Area -->
+    <div id="placeResult_Area"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
